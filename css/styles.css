@@ -1,0 +1,300 @@
+/* ===========================
+   Global Styles
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 10px 0 20px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #d62d2d;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #333;
+}
+
+/* ===========================
+   Header & Navigation
+=========================== */
+header {
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+header img {
+  max-width: 180px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #d62d2d;
+  color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Show menu on mobile */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  gap: 15px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===========================
+   Home Page
+=========================== */
+main h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.responsive-text {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.responsive-text ul {
+  list-style: square;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* ===========================
+   About Page
+=========================== */
+.staff-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.staff-member {
+  text-align: center;
+  width: 200px;
+}
+
+.staff-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Services Page
+=========================== */
+.services-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.service-category {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  border-left: 5px solid #d62d2d;
+  border-radius: 6px;
+}
+
+.service-category h2 {
+  margin-bottom: 10px;
+  color: #d62d2d;
+}
+
+/* ===========================
+   Blog Page
+=========================== */
+.blog-post {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.blog-post h1 {
+  margin-bottom: 10px;
+  color: #d62d2d;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Contact Page
+=========================== */
+table {
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input[type="submit"],
+.contact-form input[type="book now"] {
+  background: #d62d2d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="book now"]:hover {
+  background: #333;
+}
+
+/* Map */
+.map {
+  margin: 20px 0;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer .socials {
+  margin-bottom: 10px;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+footer .socials a:hover {
+  color: #d62d2d;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .staff-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive-text {
+    padding: 10px;
+  }
+
+  .service-category {
+    padding: 15px;
+  }
+}
