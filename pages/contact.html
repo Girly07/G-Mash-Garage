@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - G-Mash Garage</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+    <body>
+        <header>
+            <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="./Pages/services.html">Our Services</a>
+                <a href="./Pages/blog.html">Our blog</a>
+                <a href="./Pages/enquiry.html">Enquire</a>
+            </nav>
+            <!--Add a hamburger navigation  for small devices-->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <main>
+            <h1>Contact Us:</h1>
+            <table>
+                <tr>
+                    <td width="100">Telephone Number:</td>
+                    <td width="200">(060)434-1166</td>
+                </tr>
+                <tr>
+                    <td width="100">Physical Address:</td>
+                    <td width="100">12 Workshop Road,<br/>Pretoria<br/></td>
+                </tr>
+                <tr>
+                    <td width="100">Email Address:</td>
+                    <td width="100"><a href="mailto:info@g-mashgarage.com">Email us...</a></td>
+                </tr>
+                <tr>
+                    <td width="100">Hours Open:</td>
+                    <td width="100">Mon-Fri 08:00 - 16:00</td>
+                </tr>
+            </table>
+            <section>
+                <h1>Book your service:</h1>
+                <form action="" method="post" class="contact-form">
+                    <table>
+                        <tr>
+                            <td width="150">Name:</td>
+                            <td><input type="text" name="name" placeholder="Enter your name" required></td>
+                        </tr>
+                        <tr>
+                            <td width="150">Email:</td>
+                            <td><input type="email" name="email" placeholder="Enter your email" required></td>
+                        </tr>
+                        <tr>
+                            <td width="150">Message:</td>
+                            <td>
+                                <textarea cols="25" rows="5" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150"></td>
+                            <td><input type="book now" name="button" value="Book Now"></td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+             <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d230148.51948498434!2d27.89265632629393!3d-25.668953723975974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s12%20workshop%20road%20pretoria!5e0!3m2!1sen!2sza!4v1758721812092!5m2!1sen!2sza"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+             </main>
+    <footer>
+            <p id="myParagraph">&copy; 2025 G-Mash Garage.</p>
+    </footer>
+    <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // animate hamburger
+            });
+    </script>
+</body>
+</html>
