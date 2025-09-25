@@ -52,6 +52,11 @@ Author
 
 Mashilo Mamane Girly
 
+SEE WEBSITE RESPONSIVENESS DESIGN SCREENSHOTS:
+./Assets/Mobile320px
+./Assets/Tablet678px
+./Aseets/Laptop1024px
+
 References:
 OpenAI (2025). ChatGPT [AI language model]. Personal communication, 24 September 2025.
 Jiks, S. (2025, September 24). Mr. (John, Interviewer)
