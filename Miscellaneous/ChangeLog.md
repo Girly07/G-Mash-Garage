@@ -1,26 +1,18 @@
 Changelog
-=========
-
 v1.0.0 – Initial Release (2025-08-27)
---------------------------------------
-- Created homepage (index.html)
-- Added “About Us”, “Services”, “Blog”, and “Contact” pages
-- Implemented navigation bar and footer
-- Basic CSS and structure added
 
-v1.1.0 – Content & Styling Update (2025-09-24)
------------------------------------------------
-- Added CSS for layout, colors, and fonts
-- Integrated Font Awesome icons
-- Improved mobile responsiveness
-- Added new images and enhanced content
+    Added homepage (index.html)
 
-v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09)
-----------------------------------------------------------
-- Fixed missing hamburger menu on About page
-- Added detailed media queries for 1024px, 768px, and 480px
-- Reduced text size for small screens
-- Enhanced navigation hover using ::after pseudo-element
-- Added hover animations for staff images
-- Improved changelog documentation
-- Minor spacing and contrast adjustments for readability
+    Created, "About Us" , "Services" . "Blog" and "Contact" pages
+
+    Added navigation bar and footer
+
+    
+v1.1.0 – Latest Update (2025-09-24)
+    Added css for decoration, layout, and typography
+
+    Improved mobile responsiveness
+
+    Added responsive CSS styling
+
+    Added more content and more images
