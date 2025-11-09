@@ -46,23 +46,26 @@
                 <img src="./Assets/Homepage Picture.jpg" alt="main" width="100%" height="100%">
             </section>
         </main>
-        <footer>
-            <div class="socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <p id="myParagraph">&copy; 2025 G-Mash Garage.</p>
-        </footer>
-        <script>
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
+<!-- Footer -->
+  <footer>
+    <div class="socials">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
+  </footer>
 
-            hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active'); // animate hamburger
-            });
-        </script>
-    </body>
+  <!-- Script for Hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active'); // animate hamburger
+    });
+  </script>
+</body>
 </html>
