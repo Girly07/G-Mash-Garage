@@ -24,3 +24,4 @@ v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09)
 - Added hover animations for staff images
 - Improved changelog documentation
 - Minor spacing and contrast adjustments for readability
+- Added more socials on the footer
