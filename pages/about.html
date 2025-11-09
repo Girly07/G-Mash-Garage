@@ -19,13 +19,13 @@
     </header>
       <main>
             
-            <!--Add a hamburger navigation  for small devices-->
+            <!-- Hamburger navigation for small devices -->
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             </div>
-            </header>
+     </header>
     <main>
         <section>
             <h2>Background</h2>
@@ -107,15 +107,16 @@
     <footer>
             <p id="myParagraph">&copy; 2025 G-Mash Garage.</p>
     </footer>
-    <script>
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
+  <!-- Script for Hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-            hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active'); // animate hamburger
-            });
-    </script>
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active'); // animate hamburger
+    });
+  </script>
 </body>
 </html>
            
