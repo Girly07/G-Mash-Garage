@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquire - G-Mash Garage</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+                <a href="./services.html">Our Services</a>
+                <a href="./blog.html">Our blog</a>
+                <a href="./enquiry.html">Enquiry</a>
+            </nav>
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+      <span>&#9776;</span>
+    </div>
+  </header>
+
+  <!-- Hero / Banner -->
+  <section class="hero-sections">
+    <h1>Submit an Enquiry</h1>
+    <p>Have questions? Need a quote? We're here to help.</p>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section class="contact-form-section">
+    <h2>Send Us Your Enquiry</h2>
+    <p>Please fill out the form below and our team will get back to you shortly.</p>
+
+    <form class="contact-form" action="#" method="post">
+
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="+27 000 000 000" required>
+
+      <label for="service">Service Required *</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select a Service --</option>
+        <option>General Vehicle Service</option>
+        <option>Diagnostics</option>
+        <option>Engine Repairs</option>
+        <option>Brake Repairs</option>
+        <option>Car Wash</option>
+        <option>Mobile Mechanic</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="6" placeholder="Describe your enquiry in detail" required></textarea>
+
+      <button type="submit" class="btn">Submit Enquiry</button>
+
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 G-Mash Garage. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
