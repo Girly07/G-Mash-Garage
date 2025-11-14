@@ -24,4 +24,25 @@ v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09)
 - Added hover animations for staff images
 - Improved changelog documentation
 - Minor spacing and contrast adjustments for readability
-- Added more socials on the footer
+- Added more socials on the 
+
+v1.3.0 – Enquiry Page + Full CSS Upgrade (2025-11-14)
+-------------------------------------------------------
+- Added a brand-new page: enquiry.html
+- Created fully designed enquiry form:
+  - text inputs, dropdown, message box, button states
+  - Uniform padding, spacing, and responsive styling
+  - Clean mobile layout for the form section
+- Updated navigation menu to include “Enquiry”
+- Added complete missing CSS for:
+  - Forms (input, select, textarea)
+  - Buttons & hover effects
+  - Sections and container spacing
+  - Mobile menu behaviour
+- Improved hero section consistency across all pages
+- Standardized header and footer styling across the site
+- Fixed unresponsive layout issues on certain pages
+- Improved image path consistency and layout alignment
+- Added updated full-site styles.css (merged old + new + fixes)
+- Improved site-wide responsiveness using revised media queries
+- General code cleanup and formatting improvements
