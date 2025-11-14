@@ -20,7 +20,8 @@ Features
     |    ├── about.html          # About page  
     |    ├── contact.html        # Contact page  
     │    ├── services.html       # Services page  
-    |    └── blog.html           # Blog page  
+    |    ├── blog.html           # Blog page  
+    |    └── enguiry.html        # Enguiry page
     ├── css/
     │   └── styles.css           # Main stylesheet   
     │
