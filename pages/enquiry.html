@@ -74,10 +74,26 @@
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2024 G-Mash Garage. All Rights Reserved.</p>
+   <!-- Footer -->
+  <footer>
+    <div class="socials">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
   </footer>
 
+  <!-- Script for Hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active'); // animate hamburger
+    });
+  </script>
 </body>
 </html>
