@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - G-Mash Garage</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Services — G-Mash Garage | Repairs, Diagnostics & Detailing</title>
+  <meta name="description" content="Comprehensive car services at G-Mash Garage: oil changes, engine repairs, diagnostics, detailing, fleet services and emergency roadside assistance." />
+  <meta name="keywords" content="oil change Pretoria, engine repair Pretoria, car detailing Pretoria, fleet maintenance" />
+  <meta name="author" content="Mashilo Mamane Girly">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
     <header>
         <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
-            <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="./about.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
-                <a href="./services.html">Our Services</a>
-                <a href="./blog.html">Our blog</a>
-                <a href="./enquiry.html">Enquiry</a>
-
-            </nav>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./services.html">Our Services</a>
+            <a href="./blog.html">Our blog</a>
+            <a href="./enquiry.html">Enquiry</a>
+        </nav>
         <!-- Hamburger for mobile -->
         <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
             <span></span>
@@ -36,6 +37,9 @@
                 From routine maintenance to advanced diagnostics and premium detailing, our certified technicians are here to give your vehicle the care it deserves.
             </p>
         </section>
+
+        <!-- Search input -->
+        <input type="text" id="serviceSearch" placeholder="Search services...">
 
         <!-- Routine Maintenance -->
         <section class="service-category">
@@ -127,25 +131,51 @@
     </main>
 
     <!-- Footer -->
-  <footer>
-    <div class="socials">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <div class="socials">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
+    </footer>
 
-  <!-- Script for Hamburger -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    <!-- Scripts -->
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); 
+        });
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // animate hamburger
-    });
-  </script>
+        // Service search with highlight
+        const searchInput = document.getElementById('serviceSearch');
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            const sections = document.querySelectorAll('.service-category');
+
+            sections.forEach(section => {
+                const originalText = section.getAttribute('data-original') || section.innerText;
+                section.setAttribute('data-original', originalText);
+
+                const text = originalText.toLowerCase();
+                if (text.includes(filter)) {
+                    section.style.display = '';
+                    // Highlight matching terms
+                    const regex = new RegExp(`(${filter})`, 'gi');
+                    section.innerHTML = originalText.replace(regex, '<span class="highlight">$1</span>');
+                } else {
+                    section.style.display = 'none';
+                }
+
+                if (filter === '') {
+                    section.innerHTML = originalText;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
