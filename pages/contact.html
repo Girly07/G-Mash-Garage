@@ -1,106 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - G-Mash Garage</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — G-Mash Garage | Book a Service</title>
+  <meta name="description" content="Contact G-Mash Garage for bookings, enquiries and roadside assistance. Call (060) 434-1166 or email info@g-mashgarage.com" />
+  <meta name="keywords" content="G-Mash Garage contact, car service booking, Pretoria garage contact" />
+   <meta name="author" content="Mashilo Mamane Girly">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-    <body>
-        <header>
-            <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
-            <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="./about.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
-                <a href="./services.html">Our Services</a>
-                <a href="./blog.html">Our blog</a>
-                <a href="./enquiry.html">Enquiry</a>
-            </nav>
-            <!--Add a hamburger navigation  for small devices-->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
-        <main>
-            <h1>Contact Us:</h1>
-            <table>
-                <tr>
-                    <td width="100">Telephone Number:</td>
-                    <td width="200">(060)434-1166</td>
-                </tr>
-                <tr>
-                    <td width="100">Physical Address:</td>
-                    <td width="100">12 Workshop Road,<br/>Pretoria<br/></td>
-                </tr>
-                <tr>
-                    <td width="100">Email Address:</td>
-                    <td width="100"><a href="mailto:info@g-mashgarage.com">Email us...</a></td>
-                </tr>
-                <tr>
-                    <td width="100">Hours Open:</td>
-                    <td width="100">Mon-Fri 08:00 - 16:00</td>
-                </tr>
-            </table>
-            <section>
-                <h1>Book your service:</h1>
-                <form action="" method="post" class="contact-form">
-                    <table>
-                        <tr>
-                            <td width="150">Name:</td>
-                            <td><input type="text" name="name" placeholder="Enter your name" required></td>
-                        </tr>
-                        <tr>
-                            <td width="150">Email:</td>
-                            <td><input type="email" name="email" placeholder="Enter your email" required></td>
-                        </tr>
-                        <tr>
-                            <td width="150">Message:</td>
-                            <td>
-                                <textarea cols="25" rows="5" required></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="150"></td>
-                            <td><input type="submit" name="button" value="Book Now"></td>
-                        </tr>
-                    </table>
-                </form>
-            </section>
-             <section class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d230148.51948498434!2d27.89265632629393!3d-25.668953723975974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s12%20workshop%20road%20pretoria!5e0!3m2!1sen!2sza!4v1758721812092!5m2!1sen!2sza"
-                  width="600"
-                  height="450"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
-             </main>
-    <!-- Footer -->
+<body>
+  <header>
+    <img src="../assets/G-Mash Garage Logo.jpg" alt="G-Mash Garage logo" width="180" />
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="../index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html" class="active">Contact Us</a>
+      <a href="./services.html">Our Services</a>
+      <a href="./blog.html">Our blog</a>
+      <a href="./enquiry.html">Enquiry</a>
+    </nav>
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+
+    <section class="contact-details fade-in" aria-label="Contact details">
+      <table>
+        <tr><td><strong>Telephone</strong></td><td>(060) 434-1166</td></tr>
+        <tr><td><strong>Address</strong></td><td>12 Workshop Road, Pretoria</td></tr>
+        <tr><td><strong>Email</strong></td><td><a href="mailto:info@g-mashgarage.com">info@g-mashgarage.com</a></td></tr>
+        <tr><td><strong>Hours</strong></td><td>Mon-Fri 08:00 - 16:00</td></tr>
+      </table>
+    </section>
+
+    <section class="book-service fade-in" aria-label="Book service">
+      <h2>Book Your Service</h2>
+
+      <!-- Contact form (will compile into email on success) -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Name *</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required minlength="3" />
+
+        <label for="email">Email *</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" placeholder="Optional phone number" pattern="[\d\s+()-]{7,20}" />
+
+        <label for="reason">Type of message</label>
+        <select id="reason" name="reason">
+          <option value="booking">Booking</option>
+          <option value="general">General message</option>
+          <option value="feedback">Feedback</option>
+          <option value="complaint">Complaint</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Write your message here..."></textarea>
+
+        <div><input type="submit" value="Send Email" class="btn" /></div>
+        <p id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="map fade-in" aria-label="Map">
+      <h2>Find Us</h2>
+      <iframe title="G-Mash Garage location" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d230148.51948498434!2d27.89265632629393!3d-25.668953723975974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s12%20workshop%20road%20pretoria!5e0!3m2!1sen!2sza!4v1758721812092!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
   <footer>
     <div class="socials">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
     </div>
-    <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
+    <p>&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
   </footer>
 
-  <!-- Script for Hamburger -->
+  <!-- Inline script: form validation -> compile into email -->
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    (function(){
+      // hamburger
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      if (hamburger) hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); hamburger.classList.toggle('active'); });
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // animate hamburger
-    });
+      // form handling
+      const form = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        return re.test(email);
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const reason = document.getElementById('reason').value;
+        const message = document.getElementById('message').value.trim();
+
+        if (name.length < 3) { formMessage.textContent = 'Please enter a valid name (at least 3 characters).'; formMessage.style.color = 'red'; return; }
+        if (!validateEmail(email)) { formMessage.textContent = 'Please enter a valid email address.'; formMessage.style.color = 'red'; return; }
+        if (message.length < 10) { formMessage.textContent = 'Message should be at least 10 characters.'; formMessage.style.color = 'red'; return; }
+
+        // Compile into email body
+        const recipient = 'info@g-mashgarage.com';
+        const subject = encodeURIComponent('Website contact: ' + reason + ' — ' + name);
+        const bodyParts = [
+          'Name: ' + name,
+          'Email: ' + email,
+          'Phone: ' + (phone || 'N/A'),
+          'Reason: ' + reason,
+          '',
+          'Message:',
+          message
+        ];
+        const body = encodeURIComponent(bodyParts.join('\n'));
+
+        // Provide user feedback then open user's email client with compiled message
+        formMessage.textContent = 'Opening email client with your message. Please review and send the email to complete.';
+        formMessage.style.color = 'green';
+
+        // Use mailto to open user's mail client
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+        // Optionally reset form (not executed because user will send via email)
+        // form.reset();
+      });
+    })();
   </script>
 </body>
 </html>
