@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us- G-Mash Garage</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About Us — G-Mash Garage</title>
+  <meta name="description" content="Learn more about G-Mash Garage — our mission, vision and team. We support local community programs and provide expert automotive care." />
+  <meta name="keywords" content="about G-Mash Garage, garage team, auto repair Pretoria, community program" />
+   <meta name="author" content="Mashilo Mamane Girly">
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
- <body>
-    <header>
-        <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
-            <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="./about.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
-                <a href="./services.html">Our Services</a>
-                <a href="./blog.html">Our blog</a>
-                <a href="./enquiry.html">Enquiry</a>
-            </nav>
-       <!--Add a hamburger navigation  for small devices-->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-    </header>
-     
-    <main>
-        <section>
-            <h2>Background</h2>
+<header>
+  <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="./about.html">About Us</a>
+    <a href="./contact.html">Contact Us</a>
+    <a href="./services.html">Our Services</a>
+    <a href="./blog.html">Our blog</a>
+    <a href="./enquiry.html">Enquiry</a>
+  </nav>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<main>
+  <section class="accordion-section">
+    <div class="accordion-item">
+      <button class="accordion-btn">Background</button>
+      <div class="accordion-content">
             <p>  
                 G-Mash Garage was founded in response to the growing need for reliable, transparent, and
                 affordable automotive services in South Africa. Many car owners struggle with inconsistent service 
@@ -44,8 +47,12 @@
                 Over time, G-Mash Garage aspires to expand into multiple branches, becoming a household name associated with trust, expertise,
                 and innovation in the automotive industry.
             </p>
-            <h2>Our Mission</h2>
-            <p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn">Mission</button>
+      <div class="accordion-content">
+         <p>
                 At G-Mash Garage, our mission is to provide every car owner with reliable, professional, and 
                 affordable services that go beyond fixing cars — we focus on care, trust, and transparency. Our aim
                 is not just to repair vehicles but to ensure every customer drives away with peace of mind, knowing 
@@ -55,7 +62,11 @@
                honest pricing, and personalised customer service, we work to foster lasting relationships with every
                client who walks through our doors.
             </p>
-            <h2>Our Vision</h2>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn">Vision</button>
+      <div class="accordion-content">
             <p>
                 Our vision is to establish G-Mash Garage as the leading name in automotive care across South Africa 
                 and beyond. We aspire to be recognised not only for our technical expertise but also for our customer-first
@@ -66,63 +77,77 @@
                 G-Mash Garage seeks to redefine the car repair experience, turning what is often seen as a stressful necessity 
                 into a reliable and even enjoyable process.
             </p>
-        <h2>Meet the Team</h2>
-            <div class="staff-container">
-                <div class="staff-member">
-                    <img src="../Assets/Member 1.jpg" alt="Girly" class="staff-img">
-                    <p>Girly Mashilo<br>Garage Manager</p>
-                </div>
-
-                <div class="staff-member">
-                    <img src="../Assets/Member 2.jpg" alt="Girly" class="staff-img">
-                    <p>Kelebogile Matsetela<br>Service Advisor</p>
-                </div>
-
-                <div class="staff-member">
-                    <img src="../Assets/Member 3.jpg" alt="Girly" class="staff-img">
-                    <p>Kelebogile Mashilo<br>Vehicle Inspector</p>
-                </div>
-
-                <div class="staff-member">
-                    <img src="../Assets/Member 4.jpg" alt="Girly" class="staff-img">
-                    <p>Lebogang Mashilo<br>Head Mechanic</p>
-                </div> 
-            </div>
-             <p>
-                We run a quaterly "Car Care for Schools" program offering free inspection for teachers
-                and transport services for local non-profits. G-Mash Garage believes in investing in the 
-                communities we serve.
-                How you can help:
-            <ul>
-                <li>Volunteer time for local drivers</li>
-                <li>Donate small parts and consumables to our community program</li>
-                <li>Spread the word - referrals help local small businesses thrive</li>
-            </ul>
-                At G-Mash Garage, we make sure to deliver exceptional automotive services, ensuring
-                customer satisfaction and building long-time relationships. We don't just fix cars , we
-                care for them like they are our own. 
-            </p>
-        </section>
-    </main>
-   <!-- Footer -->
-  <footer>
-    <div class="socials">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
-    <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
-  </footer>
-  <!-- Script for Hamburger -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+  </section>
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // animate hamburger
+  <h2>Meet the Team</h2>
+  <div class="staff-container">
+    <div class="staff-member">
+      <img src="../Assets/Member 1.jpg" alt="Girly Mashilo" class="staff-img">
+      <p>Girly Mashilo<br>Garage Manager</p>
+    </div>
+    <div class="staff-member">
+      <img src="../Assets/Member 2.jpg" alt="Kelebogile Matsetela" class="staff-img">
+      <p>Kelebogile Matsetela<br>Service Advisor</p>
+    </div>
+    <div class="staff-member">
+      <img src="../Assets/Member 3.jpg" alt="Kelebogile Mashilo" class="staff-img">
+      <p>Kelebogile Mashilo<br>Vehicle Inspector</p>
+    </div>
+    <div class="staff-member">
+      <img src="../Assets/Member 4.jpg" alt="Lebogang Mashilo" class="staff-img">
+      <p>Lebogang Mashilo<br>Head Mechanic</p>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <span class="close" aria-label="Close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Expanded team image" />
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Hamburger
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Accordion
+  const accordions = document.querySelectorAll('.accordion-btn');
+  accordions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      btn.classList.toggle('active');
     });
-  </script>
+  });
+
+  // Gallery Lightbox
+  const staffImages = document.querySelectorAll('.staff-img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  staffImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.style.opacity = 0;
+      setTimeout(() => lightboxImg.style.opacity = 1, 50);
+    });
+  });
+
+  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+  lightbox.addEventListener('click', e => { if(e.target === lightbox) lightbox.style.display='none'; });
+</script>
 </body>
 </html>
