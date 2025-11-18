@@ -31,7 +31,7 @@ v1.4.0 – Enquiry Page + Full CSS Upgrade (2025-11-16)
 - implemented serach feature on Services page
 - implemented accordions on About page 
 - added gallery lighbox on About page
-- implemented real date and time at thhe top right of my Home page(index.html)
+- implemented automated date and time at thhe top right of my Home page(index.html)
 - added SEO title tags on all my pages
 - added SEO meta tags on all all my pages(the meta and description tags) 
 - added JavaScript input validation and user feedback to my Enquiry page
