@@ -46,3 +46,4 @@ v1.3.0 – Enquiry Page + Full CSS Upgrade (2025-11-14)
 - Added updated full-site styles.css (merged old + new + fixes)
 - Improved site-wide responsiveness using revised media queries
 - General code cleanup and formatting improvements
+

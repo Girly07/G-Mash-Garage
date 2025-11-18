@@ -6,33 +6,35 @@
   <title>G-Mash Garage | Professional Car Maintenance & Repair</title>
   <meta name="description" content="G-Mash Garage offers professional car maintenance, repairs, diagnostics, and detailing services in Pretoria. Trusted mechanics, affordable prices.">
   <meta name="keywords" content="Car maintenance, car repair, Pretoria garage, engine repair, tyre service, vehicle diagnostics, G-Mash Garage">
-  <meta name="author" content="Mashilo Mamane Giry">
+  <meta name="author" content="Mashilo Mamane Girly">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-        <header>
-            <img src="./Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
-            <nav class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./pages/about.html">About Us</a>
-                <a href="./pages/contact.html">Contact Us</a>
-                <a href="./pages/services.html">Our Services</a>
-                <a href="./pages/blog.html">Our blog</a>
-                <a href="./pages/enquiry.html">Enquiry</a>
-               
-            </nav>
-            <!--Add a hamburger navigation  for small devices-->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
-         <main>
-            <h1>G-MASH GARAGE</h1>
-            <div class="responsive-text">
-                <p>
+  <header>
+    <img src="./Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
+    <nav class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./pages/about.html">About Us</a>
+      <a href="./pages/contact.html">Contact Us</a>
+      <a href="./pages/services.html">Our Services</a>
+      <a href="./pages/blog.html">Our blog</a>
+      <a href="./pages/enquiry.html">Enquiry</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Date & Time -->
+  <div id="dateTime" style="text-align:right; padding:10px; font-weight:bold;"></div>
+
+  <main>
+    <h1>G-MASH GARAGE</h1>
+    <div class="responsive-text">
+             <p>
                     Welcome to G-Mash Garage! Your trusted car care partner. We provide professional car 
                     maintanace and repair to keep you safe on the road.
                     Our team is passionate about cars and commited to delivering excellent service at affordable
@@ -44,32 +46,42 @@
                 <li>Advanced diagnotics tools</li>
                 <li>Same-day service for common repairs</li>
             </ul>
-            </div>
-            <!--Image section-->
-            <section>
-                <img src="./Assets/Homepage Picture.jpg" alt="main" width="100%" height="100%">
-            </section>
-        </main>
-<!-- Footer -->
+        <p>
+          <a class="btn" href="Pages/services.html">View Services</a>
+          <a class="btn outline" href="Pages/contact.html">Book Now</a>
+        </p>
+    </div>
+    <section>
+      <img src="./Assets/Homepage Picture.jpg" alt="main" width="100%" height="100%">
+    </section>
+  </main>
+
   <footer>
     <div class="socials">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
   </footer>
 
-  <!-- Script for Hamburger -->
   <script>
+    // Hamburger menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // animate hamburger
+      hamburger.classList.toggle('active');
     });
+
+    // Real date and time
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('dateTime').textContent = now.toLocaleString();
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
   </script>
 </body>
 </html>
