@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - G-Mash Garage</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enquiry — G-Mash Garage | Service & Sponsorship Enquiry</title>
+  <meta name="description" content="Send an enquiry to G-Mash Garage about services, volunteering or sponsorship. Get an instant estimate and availability info." />
+  <meta name="keywords" content="enquiry, quote, volunteering, sponsorship, G-Mash Garage" />
+  <meta name="author" content="Mashilo Mamane Girly">
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-    <header>
-        <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
-            <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="./about.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
-                <a href="./services.html">Our Services</a>
-                <a href="./blog.html">Our blog</a>
-                <a href="./enquiry.html">Enquiry</a>
-            </nav>
-        <!-- Hamburger for mobile -->
-        <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <div class="mobile-menu">
-      <span>&#9776;</span>
+  <header>
+    <img src="../Assets/G-Mash Garage Logo.jpg" alt="Logo" width="200" height="150">
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./services.html">Our Services</a>
+      <a href="./blog.html">Our Blog</a>
+      <a href="./enquiry.html">Enquiry</a>
+    </nav>
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
-  <!-- Hero / Banner -->
   <section class="hero-sections">
     <h1>Submit an Enquiry</h1>
     <p>Have questions? Need a quote? We're here to help.</p>
   </section>
 
-  <!-- Enquiry Form -->
   <section class="contact-form-section">
     <h2>Send Us Your Enquiry</h2>
     <p>Please fill out the form below and our team will get back to you shortly.</p>
 
-    <form class="contact-form" action="#" method="post">
-
+    <form class="contact-form" id="enquiryForm" novalidate>
       <label for="name">Full Name *</label>
       <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <span class="error" id="nameError"></span>
 
       <label for="email">Email Address *</label>
       <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <span class="error" id="emailError"></span>
 
       <label for="phone">Phone Number *</label>
       <input type="tel" id="phone" name="phone" placeholder="+27 000 000 000" required>
+      <span class="error" id="phoneError"></span>
 
       <label for="service">Service Required *</label>
       <select id="service" name="service" required>
@@ -65,34 +60,118 @@
         <option>Mobile Mechanic</option>
         <option>Other</option>
       </select>
+      <span class="error" id="serviceError"></span>
 
       <label for="message">Your Message *</label>
       <textarea id="message" name="message" rows="6" placeholder="Describe your enquiry in detail" required></textarea>
+      <span class="error" id="messageError"></span>
 
       <button type="submit" class="btn">Submit Enquiry</button>
-
+      <div id="formFeedback" class="success"></div>
     </form>
   </section>
 
-    <!-- Footer -->
   <footer>
     <div class="socials">
-              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-              <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p id="myParagraph">&copy; 2025 G-Mash Garage. All Rights Reserved.</p>
   </footer>
 
-  <!-- Script for Hamburger -->
   <script>
+    // Hamburger menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // animate hamburger
+      hamburger.classList.toggle('active');
+    });
+
+    // Enquiry form validation
+    const form = document.getElementById('enquiryForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const serviceInput = document.getElementById('service');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const serviceError = document.getElementById('serviceError');
+    const messageError = document.getElementById('messageError');
+    const formFeedback = document.getElementById('formFeedback');
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validatePhone(phone) {
+      return /^\+?\d{10,15}$/.test(phone.replace(/\s/g, ''));
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let valid = true;
+
+      // Name validation
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = "Please enter your full name.";
+        valid = false;
+      } else {
+        nameError.textContent = '';
+      }
+
+      // Email validation
+      if (emailInput.value.trim() === '') {
+        emailError.textContent = "Please enter your email.";
+        valid = false;
+      } else if (!validateEmail(emailInput.value.trim())) {
+        emailError.textContent = "Please enter a valid email address.";
+        valid = false;
+      } else {
+        emailError.textContent = '';
+      }
+
+      // Phone validation
+      if (phoneInput.value.trim() === '') {
+        phoneError.textContent = "Please enter your phone number.";
+        valid = false;
+      } else if (!validatePhone(phoneInput.value.trim())) {
+        phoneError.textContent = "Please enter a valid phone number (+27...).";
+        valid = false;
+      } else {
+        phoneError.textContent = '';
+      }
+
+      // Service validation
+      if (serviceInput.value === '') {
+        serviceError.textContent = "Please select a service.";
+        valid = false;
+      } else {
+        serviceError.textContent = '';
+      }
+
+      // Message validation
+      if (messageInput.value.trim() === '') {
+        messageError.textContent = "Please enter your message.";
+        valid = false;
+      } else {
+        messageError.textContent = '';
+      }
+
+      // If all valid
+      if (valid) {
+        formFeedback.textContent = "Thank you! Your enquiry has been submitted successfully.";
+        form.reset();
+      } else {
+        formFeedback.textContent = '';
+      }
     });
   </script>
 </body>
