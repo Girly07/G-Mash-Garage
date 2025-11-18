@@ -15,7 +15,7 @@ v1.1.0 – Content & Styling Update (2025-09-24)
 - Improved mobile responsiveness
 - Added new images and enhanced content
 
-v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09)
+v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09) -----CHANGES/IMPROVEMENTS FROM PART 2
 ----------------------------------------------------------
 - Fixed missing hamburger menu on About page
 - Added detailed media queries for 1024px, 768px, and 480px
@@ -24,26 +24,18 @@ v1.2.0 – Accessibility & Responsiveness Fix (2025-11-09)
 - Added hover animations for staff images
 - Improved changelog documentation
 - Minor spacing and contrast adjustments for readability
-- Added more socials on the 
+- Added more socials on the footer
 
-v1.3.0 – Enquiry Page + Full CSS Upgrade (2025-11-14)
+v1.4.0 – Enquiry Page + Full CSS Upgrade (2025-11-16)
 -------------------------------------------------------
-- Added a brand-new page: enquiry.html
-- Created fully designed enquiry form:
-  - text inputs, dropdown, message box, button states
-  - Uniform padding, spacing, and responsive styling
-  - Clean mobile layout for the form section
-- Updated navigation menu to include “Enquiry”
-- Added complete missing CSS for:
-  - Forms (input, select, textarea)
-  - Buttons & hover effects
-  - Sections and container spacing
-  - Mobile menu behaviour
-- Improved hero section consistency across all pages
-- Standardized header and footer styling across the site
-- Fixed unresponsive layout issues on certain pages
-- Improved image path consistency and layout alignment
-- Added updated full-site styles.css (merged old + new + fixes)
-- Improved site-wide responsiveness using revised media queries
-- General code cleanup and formatting improvements
-
+- implemented serach feature on Services page
+- implemented accordions on About page 
+- added gallery lighbox on About page
+- implemented real date and time at thhe top right of my Home page(index.html)
+- added SEO title tags on all my pages
+- added SEO meta tags on all all my pages(the meta and description tags) 
+- added JavaScript input validation and user feedback to my Enquiry page
+- added JavaScript input validation and email recipient processing and feedback to my Contact page (but my error messages
+and user feeback appear/display under each textbox)
+- added "Book" and "Vie Services" buttons to Home Page
+- added all updated references in the ReadMe.md file 
